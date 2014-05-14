@@ -11,7 +11,7 @@ void citire(int &n, int a[100])//Citeste n si elementele sirului
         fin>>a[i];
     }
 }
-void sortare(int a[100], int n)//Se sorteaza doar elementele pare
+void sortare(int a[100], int n)//Se sorteaza crescator doar elementele pare
 {
     int i, j, temp;//in temp (a se citi aux) se va tine temporar valoarea
     for(i=0;i<n;i++)
