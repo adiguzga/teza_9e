@@ -44,7 +44,7 @@ void mutare_elem(int a[100], int b[100], int n, int &m)
 }
 void afisare(int b[100], int m)
 {
-    cout<<"Noul vecto este :(";
+    cout<<"Noul vector este :(";
     for(int i=0;i<m;i++)
     {
         cout<<b[i]<<",";
