@@ -1,5 +1,7 @@
 #include <ctime>
 #include <cmath>
+#include <iostream>
+#include <iomanip>
 using namespace std;
 double v[100],s;
 int n,i;
