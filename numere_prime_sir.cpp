@@ -25,8 +25,8 @@ int prim(int n)
                 break;
             }
     if(e_prim==1)
-        return true;
-    return false;
+        return 1;
+    return 0;
 }
 int main()
 {
@@ -35,7 +35,7 @@ int main()
     citire(a,n);
     for(i=0;i<n;i++)
     {
-        if(prim(a[i])==true)
+        if(prim(a[i])==1)
             contor++;
     }
     cout<<"Sunt "<<contor<<" numere prime";
