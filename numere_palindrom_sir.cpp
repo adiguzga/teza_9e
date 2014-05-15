@@ -22,8 +22,8 @@ int palindrom(int n)
         n=n/10;
     }
     if(aux==invers)
-        return true;
-    return false;
+        return 1;
+    return 0;
 }
 int main()
 {
@@ -32,7 +32,7 @@ int main()
     citire(a,n);
     for(i=0;i<n;i++)
     {
-        if(palindrom(a[i])==true)
+        if(palindrom(a[i])==1)
             contor++;
     }
     cout<<"Sunt "<<contor<<" numere palindroame";
