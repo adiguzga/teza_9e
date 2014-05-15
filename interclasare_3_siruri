@@ -1,0 +1,63 @@
+#include<iostream>
+using namespace std;
+void citire(int &n, int a[100])
+{
+    int i;
+    cout<<"nr="; cin>>n;
+    for(i=0;i<n;i++)
+        cin>>a[i];
+}
+void interclasare1(int n,int m,int &k1, int a[100],int b[100],int k[200])
+{
+    int i=0,j=0;
+    k1=0;
+    while(i<n&&j<m)
+    {
+        k[k1++]=a[i++];
+        k[k1++]=b[j++];
+    }
+    if(n>m)
+        while(i<n)
+            k[k1++]=a[i++];
+    else
+        while(j<m)
+            k[k1++]=b[j++];
+}
+void interclasare2(int k1,int l,int &k2, int k[200],int c[100],int K[300])
+{
+    int i=0,j=0;
+    k2=0;
+    while(i<k1&&j<l)
+    {
+        K[k2++]=k[i++];
+        K[k2++]=c[j++];
+    }
+    if(k1>l)
+        while(i<k1)
+            K[k2++]=k[i++];
+    else
+        while(j<l)
+            K[k2++]=c[j++];
+}
+void afisare(int n, int a[100])
+{
+    int i;
+    for(i=0;i<n;i++)
+        cout<<a[i]<<" ";
+    cout<<endl;
+}
+int main ()
+{
+    int n,m,l,k1,k2,a[100],b[100],c[100],k[200],K[300];
+    citire(n,a);
+    citire(m,b);
+    citire(l,c);
+    afisare(n,a);
+    afisare(m,b);
+    afisare(l,c);
+    interclasare1(n,m,k1,a,b,k);
+    afisare(k1,k);
+    interclasare2(k1,l,k2,k,c,K);
+    afisare(k2,K);
+	return 0;
+}
